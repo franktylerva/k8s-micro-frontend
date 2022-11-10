@@ -1,3 +1,3 @@
 FROM alpine
 
-COPY public /feature-b
+COPY build /feature-b
