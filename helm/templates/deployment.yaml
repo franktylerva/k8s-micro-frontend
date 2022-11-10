@@ -30,9 +30,6 @@ spec:
       initContainers:
       {{- with .Values.features }}
         {{- toYaml . | nindent 8 }}
-          volumeMounts:
-            - name: shared-data
-              mountPath: /shared-data
       {{- end }}
       containers:
         - name: {{ .Chart.Name }}
@@ -40,18 +37,13 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: shared-data
+              mountPath: /usr/share/nginx/html
           ports:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -66,3 +58,6 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      volumes:
+        - name: shared-data
+          emptyDir: {}

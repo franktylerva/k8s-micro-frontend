@@ -8,11 +8,21 @@ image:
   repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "latest"
 
 features:
   - name: feature-a
     image: feature-a:1.0.0
+    volumeMounts:
+      - name: shared-data
+        mountPath: /shared-data
+    command: ["/bin/sh", "-c", "cp -r /feature-a /shared-data/"]
+  - name: feature-b
+    image: feature-b:1.0.0
+    volumeMounts:
+      - name: shared-data
+        mountPath: /shared-data
+    command: ["/bin/sh", "-c", "cp -r /feature-b /shared-data/"]
 
 imagePullSecrets: []
 nameOverride: ""
