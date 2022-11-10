@@ -2,3 +2,19 @@ This project demonstrates an approach to having separate, versioned frontend pro
 ```
 helm upgrade micro-frontend helm --install
 ```
+
+Run the following commands to build feature-a:
+```
+cd feature-a
+export PUBLIC_URL=/feature-a
+npm run-script build
+docker build -t feature-a:1.0.0 .
+```
+
+Run the following commands to build feature-b:
+```
+cd feature-b
+export PUBLIC_URL=/feature-b
+yarn build
+docker build -t feature-b:1.0.0 .
+```
