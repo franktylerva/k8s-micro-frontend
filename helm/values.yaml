@@ -13,11 +13,6 @@ image:
 features:
   - name: feature-a
     image: feature-a:1.0.0
-    volumeMounts:
-      - name: feature-a
-        mountPath: 
-
-
 
 imagePullSecrets: []
 nameOverride: ""
