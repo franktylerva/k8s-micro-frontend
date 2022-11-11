@@ -18,6 +18,8 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -34,6 +36,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: "feature-a"
+          context: "./feature-a"
           push: true
           tags: tfrank773/feature-a:1.0.0
