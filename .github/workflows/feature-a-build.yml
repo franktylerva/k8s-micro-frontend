@@ -39,6 +39,6 @@ jobs:
           context: "./feature-a"
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: tfrank773/feature-a:1.0.0
+          tags: tfrank773/feature-a:1.0.1
           cache-from: type=gha
           cache-to: type=gha,mode=max
