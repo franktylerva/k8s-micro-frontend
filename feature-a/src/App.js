@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Feature A with push and corrected image name without tag .
+        Feature A with push and corrected image name without tag.
       </header>
     </div>
   );
