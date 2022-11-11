@@ -12,7 +12,7 @@ image:
 
 features:
   - name: feature-a
-    image: tfrank773/feature-a:1.0.1
+    image: tfrank773/feature-a:1.0.0
     volumeMounts:
       - name: shared-data
         mountPath: /shared-data
