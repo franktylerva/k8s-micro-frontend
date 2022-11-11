@@ -10,7 +10,7 @@ on:
     paths:
       - 'feature-b/**'
 
-obs:
+jobs:
   call-docker-build-and-push-workflow:
     uses: franktylerva/github-workflows/.github/workflows/docker-build-and-push.yml@main
     with:
