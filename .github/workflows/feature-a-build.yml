@@ -19,4 +19,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build ./feature-a --file Dockerfile --tag tfrank773/feature-a:1.0.0
+      run: docker build ./feature-a --file ./feature-a/Dockerfile --tag tfrank773/feature-a:1.0.0

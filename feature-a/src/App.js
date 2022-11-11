@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Feature A with new context.
+        Feature A with corrected context.
       </header>
     </div>
   );
