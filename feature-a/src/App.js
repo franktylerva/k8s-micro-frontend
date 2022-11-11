@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Feature A with corrected context.
+        Feature A with push.
       </header>
     </div>
   );
