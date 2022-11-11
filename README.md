@@ -7,7 +7,7 @@ Run the following commands to build feature-a:
 ```
 cd feature-a
 export PUBLIC_URL=/feature-a
-npm run-script build
+yarn build
 docker build -t feature-a:1.0.0 .
 ```
 
