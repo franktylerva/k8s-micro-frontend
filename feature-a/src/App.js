@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Feature A Test Build
+        Feature A with new context.
       </header>
     </div>
   );
