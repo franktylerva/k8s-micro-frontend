@@ -15,7 +15,7 @@ env:
   IMAGE_NAME: tfrank773/feature-a
 
 jobs:
-  docker:
+  buildAndPublishImage:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
