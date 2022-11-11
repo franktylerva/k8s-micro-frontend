@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        Feature B
+        Feature B Version 1.0.0
       </header>
     </div>
   );
