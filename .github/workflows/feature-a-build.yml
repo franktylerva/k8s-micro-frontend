@@ -12,7 +12,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: tfrank773/feature-a:1.0.0
+  IMAGE_NAME: tfrank773/feature-a
 
 jobs:
   build:
