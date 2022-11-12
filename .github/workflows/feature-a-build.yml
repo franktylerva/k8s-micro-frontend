@@ -15,5 +15,5 @@ jobs:
     uses: franktylerva/github-workflows/.github/workflows/docker-build-and-push.yml@main
     with:
       context: "./feature-a"
-      image-base-name: tfrank773/feature-a
+      image-name: feature-a
     secrets: inherit
