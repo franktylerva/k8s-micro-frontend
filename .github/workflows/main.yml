@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        run: echo ${{ env.TAGS }}
+        run: echo ${{ join(env.TAGS, ',')[0] }}
