@@ -4,11 +4,13 @@ on:
   workflow_dispatch
 
 env:
-  TAGS: "{tags: ['a','b','c'], name: 'cool'}"
+  TAGS: "a,b,c"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: step1
-        run: echo ${{ toJson(env.TAGS).name }}
+        run: |
+          tags=($(echo "$TAGS" | tr ',' '\n'))
+          echo "${tags[0]}"
