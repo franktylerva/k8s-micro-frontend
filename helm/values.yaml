@@ -15,7 +15,7 @@ features:
         mountPath: /shared-data
     command: ["/bin/sh", "-c", "cp -r /feature-a /shared-data/"]
   - name: feature-b
-    image: tfrank773/feature-b:sha-e0458fa
+    image: tfrank773/feature-b:sha-442b065
     volumeMounts:
       - name: shared-data
         mountPath: /shared-data
