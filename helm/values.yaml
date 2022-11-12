@@ -9,7 +9,7 @@ image:
   tag: "latest"
 features:
   - name: feature-a
-    image: ""
+    image: "tfrank773/feature-a:main"
     volumeMounts:
       - name: shared-data
         mountPath: /shared-data
