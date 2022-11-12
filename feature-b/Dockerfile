@@ -5,7 +5,7 @@ COPY package.json ./
 RUN yarn install
 COPY ./src ./src
 COPY ./public ./public
-ENV PUBLIC_URL=/feature-a
+ENV PUBLIC_URL=/feature-b
 RUN yarn build
 
 FROM alpine
